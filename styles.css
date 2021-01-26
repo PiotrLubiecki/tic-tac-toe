@@ -52,25 +52,24 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.playable-div {
     background-color: #cfd3ce;
 }
 
 .grid-top {
     border-top: none;
-    background-color: #c4b6b6;
 }
 
 .grid-bot {
     border-bottom: none;
-    background-color: #c4b6b6;
 }
 
 .grid-left {
     border-left: none;
-    background-color: #c4b6b6;
 }
 
 .grid-right {
     border-right: none;
-    background-color: #c4b6b6;
 }
