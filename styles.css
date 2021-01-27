@@ -22,7 +22,7 @@ html, body {
     align-items: center;
 }
 
-.player {
+#player1, #player2 {
     height: 100%;
     width: 30vw;
     min-width: 40vh;
