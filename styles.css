@@ -37,7 +37,7 @@ body{
     height: 60vh;
     width: 100%;
     position: relative;
-    top: 40%;
+    top: 35%;
     transform: translateY(-50%);
     display: flex;
     justify-content: center;
@@ -49,7 +49,7 @@ body{
     height: 20vh;
     width: 20vh;
     min-width: max-content;
-    font-size: 40px;
+    font-size: 4vh;
     line-height: 5vh;
     text-align: center;
 }
@@ -105,7 +105,31 @@ body{
 #result {
     width: max-content;
     position: relative;
-    top: 15vh;
+    top: 10vh;
     font-size: 10vh;
     visibility: hidden;
+}
+
+#buttons {
+    position: relative;
+    top: 12vh;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    font-size: 2.5vh;
+    height: 5vh;
+    width: 20vh;
+    border-radius: 1em;
+    border: 1px solid black;
+    background-color: #cfd3ce;
+    text-align: center;
+    margin: 1vh;
+}
+
+button:hover {
+    font-size: 3vh;
 }
