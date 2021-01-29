@@ -59,11 +59,11 @@ const choosePlayers = (() => {
 
     const getNames = (function(){
         let player1Name = prompt('First player name:');
-        if (player1Name == ''){
+        if (player1Name == '' || player1Name == null){
             player1Name = 'Player 1'
         }
         let player2Name = prompt('Second player name:');
-        if (player2Name == ''){
+        if (player2Name == '' || player2Name == null){
             player2Name = 'Player 2'
         }
         const player1 = Player(player1Name, 'O');
