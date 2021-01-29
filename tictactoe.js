@@ -129,6 +129,8 @@ const resetButtons = (() => {
         resetButton.addEventListener('click', () => {
             score1.textContent = 0;
             score2.textContent = 0;
+            score1.style = 'visibility: hidden';
+            score2.style =  'visibility: hidden';
             let resultDiv = document.querySelector('#result');
                 resultDiv.style = 'visibility: hidden';
             let player1Selector = document.querySelector('#player1-name');
