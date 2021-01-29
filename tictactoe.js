@@ -15,6 +15,10 @@ const Gameboard = (() => {
             choosePlayers.getNames.currentPlayer.playerChoices.push(x);
             counter ++;
             winnerAssessment.checkWinner(choosePlayers.getNames.currentPlayer);
+            if (counter == 9){
+                let isThereAWinner = false;
+                winnerAssessment.isWinner('', isThereAWinner);
+            }
             choosePlayers.getNames.currentPlayer.switchPlayers();
         }
     };
@@ -31,7 +35,7 @@ const Gameboard = (() => {
         counter = 0;
     }
     return {
-        reset, counter
+        reset
     }
 })();
 
@@ -80,10 +84,6 @@ const choosePlayers = (() => {
 //asseses wether there is a winner, if there  prints correct winner, if not prints draw message
 const winnerAssessment = (() => {
     function checkWinner(player){
-        if (Gameboard.counter == 9){
-            let isThereAWinner = false;
-            isWinner('', isThereAWinner);
-        }
         const winningCombinations = [[0, 1, 2],[3, 4, 5],[6, 7, 8],[0, 3, 6],[1, 4, 7],[2, 5, 8],[0, 4, 8],[2, 4, 6]];
         if(player.playerChoices.length >= 3){
             for (let i = 0; i < winningCombinations.length; i++){
@@ -114,7 +114,7 @@ const winnerAssessment = (() => {
         }
         Gameboard.reset();
     }
-    return {checkWinner}
+    return {checkWinner, isWinner}
 })();
 
 //resets the board or starts new game when the button is clicked
