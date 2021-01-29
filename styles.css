@@ -11,6 +11,12 @@ html, body {
     background-color: #c4b6b6;
 }
 
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 #header { 
     min-width: 60vh;
     width: 100%;
@@ -39,12 +45,18 @@ html, body {
 }
 
 #player1, #player2 {
-    height: 100%;
-    width: 30vw;
-    min-width: 40vh;
+    margin: 10vh;
+    height: 20vh;
+    width: 20vh;
+    min-width: max-content;
     font-size: 40px;
-    line-height: 80px;
+    line-height: 5vh;
     text-align: center;
+}
+
+#player1-score, #player2-score {
+    line-height: 10vh;
+    visibility: hidden;
 }
 
 .player-text {
@@ -88,4 +100,12 @@ html, body {
 
 .grid-right {
     border-right: none;
+}
+
+#result {
+    width: max-content;
+    position: relative;
+    top: 15vh;
+    font-size: 10vh;
+    visibility: hidden;
 }
